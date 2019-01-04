@@ -1,0 +1,118 @@
+ <!-- <h3>Welcome to National Health Service</h3>
+
+ <div class="col-sm-offset-2 col-sm-10">
+  <button type="submit" class="btn btn-primary"  (click)="getList()">FetchList</button>
+</div> -->
+<!-- <div class="col-sm-offset-2 col-sm-10">
+  <button type="submit" class="btn btn-primary"  (click)="getAddress()">Fetch List</button>
+</div> -->
+
+<h3>Welcome to National Health Service</h3>
+<form (ngSubmit)=addresser(f) #f="ngForm">
+  <label for="btype">Blood Type</label>
+ <select class="form-control" id="btype" ngModel name="btype" required>
+   <option value="A+">A+</option>
+   <option value="A-">A-</option>
+   <option value="B-">B-</option>
+   <option value="B+">B+</option>
+   <option value="AB+">AB+</option>
+   <option value="AB-">AB-</option>
+   <option value="O-">O-</option>
+   <option value="O+">O+</option>
+ </select>
+ <label for="otype">Organ Type</label>
+ <select class="form-control"  ngModel name="otype" required>
+   <option value="Lung">Lung</option>
+   <option value="Kidney">Kidney</option>
+   <option value="Liver">Liver</option>
+   <option value="Eye(corneas)">Eye(corneas)</option>
+   <option value="Larynx">Larynx</option>
+   <option value="Pancreas">Pancreas</option>
+   <option value="Intestine">Intestine</option>
+ </select>
+ <label for="idproof">Id Proof</label><br>
+  <input ngModel name="idproof" type="text">
+  <input type="submit">
+</form>
+
+
+
+ <div *ngIf="state">
+   <p>Status : {{state.Status}}</p>
+   <p>Transaction id : {{state.Txnid}}</p>
+   <!-- <p>Txn Data  :{{stateDt}}</p> -->
+   <b><p>Name:{{detailsList.ran}}</p>
+   <p>Date of Birth:{{detailsList.dat}}</p>
+   <p>Blood Type:{{detailsList.name}}</p>
+   <p>Organ:{{detailsList.bty}}</p></b>
+  
+
+ </div>
+
+
+<!-- <div class="form-group">
+   <label class="control-label col-sm-2" id="btype">Blood Type:</label> 
+  <div class="col-sm-10"><legend>
+          <select class="form-control" id="btype" #btype type="text" name='btype' ngModel required>
+            <option>A+</option>
+            <option>A-</option>
+            <option>B-</option>
+            <option>B+</option>
+            <option>AB+</option>
+            <option>AB-</option>
+            <option>O-</option>
+            <option>O+</option>
+          </select></legend>
+          <br>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-5" id="otype">Organ to be recieved</label>
+      <div class="col-sm-10">
+        <legend>
+        <select class="form-control" id="otype" #otype type="text" name='otype' ngModel required>
+            <option>Lung</option>
+            <option>Kidney</option>
+            <option>Liver</option>
+            <option>Eye(corneas)</option>
+            <option>Larynx</option>
+            <option>Pancreas</option>
+            <option>Intestine</option>
+          </select></legend>
+      </div>
+    </div>
+    <button type="button" class="btn btn-outline-success">request</button> -->
+  <!-- <div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+              <legend>Organ Donor List</legend>
+              <label for="address"></label>
+          <input type="text" class="form-control-inline">
+          <input type="checkbox"> 
+            </div>
+            <div class="col-md-7">
+                <label for="address"></label>
+            <input type="text" class="form-control-inline">
+            <input type="checkbox"> 
+              </div>
+              <div class="col-md-7">
+                  <legend>Recipient List</legend>
+                  <label for="address"></label>
+              <input type="text" class="form-control-inline">
+              <input type="checkbox"> 
+                </div>
+                <div class="col-md-7">
+                    <label for="address"></label>
+                <input type="text" class="form-control-inline">
+                <input type="checkbox"> 
+                  </div> -->
+            <!-- <div class="col-md-6">
+              <button class="btn btn-success" href="">match</button>
+            </div>
+          </div> -->
+        <!-- </div>
+          
+          
+        
+</div> -->
+      
